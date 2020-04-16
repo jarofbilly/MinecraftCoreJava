@@ -10,5 +10,9 @@ commands:
     description: Example command
     usage: "/example"
     aliases: []
-    permission: exampleplugin.command.example
+    permission: MinecraftCore.command.compass
     permission-message: "You do not have the required permission to run /example"
+  addperm:
+    description: New Example command
+    usage: "/example"
+    aliases: []
