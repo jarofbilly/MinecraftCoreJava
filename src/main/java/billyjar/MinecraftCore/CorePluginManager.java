@@ -1,7 +1,11 @@
 package billyjar.MinecraftCore;
 
+import cn.nukkit.permission.PermissionAttachment;
 import cn.nukkit.plugin.PluginBase;
 import cn.nukkit.utils.TextFormat;
+
+import java.util.HashMap;
+import java.util.UUID;
 
 
 public class CorePluginManager extends PluginBase{ //extends pluginbase allows for the use of plugin

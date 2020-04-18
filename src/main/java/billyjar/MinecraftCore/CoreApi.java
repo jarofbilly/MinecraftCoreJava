@@ -39,5 +39,6 @@ public class CoreApi {
     public Server getServer() {
         return plugin.getServer();
     }
+
 }
 
