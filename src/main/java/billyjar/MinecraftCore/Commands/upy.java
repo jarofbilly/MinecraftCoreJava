@@ -6,6 +6,7 @@ import cn.nukkit.Player; //add these in they're usefull
 import cn.nukkit.block.Block;
 import cn.nukkit.command.CommandSender;
 import cn.nukkit.item.Item;
+import cn.nukkit.level.Level;
 import cn.nukkit.level.Location;
 import cn.nukkit.level.Position;
 import cn.nukkit.math.BlockFace;
@@ -20,11 +21,10 @@ public class upy extends CommandBase {
             return false;
         }
         sender.sendMessage("Whoosh, you've gone up loads");
+        Player player = sender.getServer().getPlayerExact(sender.getName());
+        Level level = (Level) sender;
+        level.setBlock(player.getPosition(), Block.get(Block.GLASS));
+
         return true;
-//        Player player = sender.getServer().getPlayerExact(sender.getName());
-//        Position pos = (Position) sender;
-//        Block block = (Block) sender;
-//        block.place(Item.GLASS, Block.GLASS, Block.AIR, BlockFace.UP, pos.x, pos.y, pos.x, player);
-//        return true;
     }
 }
