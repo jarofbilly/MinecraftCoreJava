@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="jar" build-on-make="true" name="MinecraftCore">
-    <output-path>$USER_HOME$/Documents/Nukkit/plugins</output-path>
+    <output-path>$PROJECT_DIR$</output-path>
     <root id="archive" name="MinecraftCore.jar">
       <element id="module-output" name="MC_Core" />
     </root>

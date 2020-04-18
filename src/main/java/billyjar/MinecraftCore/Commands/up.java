@@ -8,6 +8,7 @@ import cn.nukkit.command.CommandSender;
 import cn.nukkit.item.Item;
 import cn.nukkit.level.Location;
 import cn.nukkit.level.Position;
+import cn.nukkit.math.BlockFace;
 
 public class up extends CommandBase {
     public up (CoreApi api) {
@@ -18,10 +19,12 @@ public class up extends CommandBase {
         if (!this.testPermission(sender)) {
             return false;
         }
-        Player player = sender.getServer().getPlayerExact(sender.getName());
-        Position pos = (Position) sender;
-        Block block = (Block) sender;
-        block.place(Item.GLASS, Block.GLASS, )
+        sender.sendMessage("Whoosh, you've gone up loads");
         return true;
+//        Player player = sender.getServer().getPlayerExact(sender.getName());
+//        Position pos = (Position) sender;
+//        Block block = (Block) sender;
+//        block.place(Item.GLASS, Block.GLASS, Block.AIR, BlockFace.UP, pos.x, pos.y, pos.x, player);
+//        return true;
     }
 }
