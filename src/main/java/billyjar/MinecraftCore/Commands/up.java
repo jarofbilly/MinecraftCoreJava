@@ -19,10 +19,4 @@ public class up extends CommandBase {
         Player player = sender.getServer().getPlayerExact(sender.getName());
         return true;
     }
-
-
-
-
-    return true;
-    }
 }
