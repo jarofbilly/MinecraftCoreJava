@@ -25,7 +25,7 @@ import cn.nukkit.plugin.PluginBase;
 import cn.nukkit.utils.Config;
 import cn.nukkit.utils.ConfigSection;
 
-import static billyjar.MinecraftCore.CorePluginManager.plugin;
+
 
 public class CoreApi {
     public CoreApi(CorePluginManager plugin){

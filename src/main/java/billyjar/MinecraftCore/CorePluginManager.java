@@ -4,7 +4,6 @@ import cn.nukkit.plugin.PluginBase;
 import cn.nukkit.utils.TextFormat;
 
 
-
 public class CorePluginManager extends PluginBase{ //extends pluginbase allows for the use of plugin
     public static CorePluginManager plugin;
 
