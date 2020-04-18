@@ -30,6 +30,7 @@ import cn.nukkit.utils.ConfigSection;
 
 public class CoreApi {
     private static CoreApi instance = null;
+    private CorePluginManager plugin;
     public CoreApi(CorePluginManager plugin){
         instance = this;
         this.plugin = plugin;
