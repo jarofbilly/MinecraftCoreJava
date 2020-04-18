@@ -65,12 +65,13 @@ public class main extends PluginBase {
     }
 
     public void showGmf(Player p) {
-        FormWindowSimple gui = new FormWindowSimple("Gamemode UI", "Change your game mode quickly and simply");
+        FormWindowSimple gui = new FormWindowSimple("Test", "Change your game mode quickly and simply");
 
         gui.addButton(new ElementButton("Adventure"));
         gui.addButton(new ElementButton("Creative"));
         gui.addButton(new ElementButton("Survival"));
         gui.addButton(new ElementButton("Spectator"));
+
 
 
         p.showFormWindow(gui);

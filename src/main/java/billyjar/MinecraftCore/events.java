@@ -4,6 +4,7 @@ import cn.nukkit.Player;
 import cn.nukkit.event.EventHandler;
 import cn.nukkit.event.Listener;
 import cn.nukkit.event.player.PlayerFormRespondedEvent;
+import cn.nukkit.event.player.PlayerItemConsumeEvent;
 import cn.nukkit.event.player.PlayerMoveEvent;
 import cn.nukkit.form.window.FormWindowSimple;
 import cn.nukkit.utils.TextFormat;
@@ -21,9 +22,10 @@ public class events implements Listener {
         Player p = e.getPlayer();
         if (e.getWindow() instanceof FormWindowSimple) {
             FormWindowSimple gui = (FormWindowSimple) e.getWindow();
-            String responseName = gui.getResponse().getClickedButton().getText();
-
-
+            if (gui.getTitle().equals("Test")) {
+                String responseName = gui.getResponse().getClickedButton().getText();
+                p.sendMessage("You selected: "+responseName);
+            }
 
             return;
         }

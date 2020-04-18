@@ -16,6 +16,6 @@ public class up extends CommandBase {
             return false;
         }
 
-
+    return true;
     }
 }
