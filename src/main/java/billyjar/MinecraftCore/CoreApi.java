@@ -36,8 +36,8 @@ public class CoreApi {
         this.plugin = plugin;
     }
 
-    public Server getServer(CoreApi api) {return plugin.Server(); }
-
+    public Server getServer() {
+        return plugin.getServer();
     }
 }
 
