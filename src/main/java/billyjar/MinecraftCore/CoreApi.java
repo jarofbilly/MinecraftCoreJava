@@ -25,9 +25,6 @@ import cn.nukkit.plugin.PluginBase;
 import cn.nukkit.utils.Config;
 import cn.nukkit.utils.ConfigSection;
 
-
-
-
 public class CoreApi {
     private static CoreApi instance = null;
     private CorePluginManager plugin;
