@@ -2,6 +2,7 @@ package billyjar.MinecraftCore;
 
 import cn.nukkit.command.Command;
 import cn.nukkit.command.CommandSender;
+import cn.nukkit.utils.TextFormat;
 
 public abstract class CommandBase extends Command {
 
@@ -10,6 +11,7 @@ public abstract class CommandBase extends Command {
     public CommandBase(String name, CoreApi api) {
         super(name);
         this.setPermission("MinecraftCore." + name);
+        CorePluginManager.plugin.getLogger().info(TextFormat.GREEN + name + "permission enabled!");
         this.api = api;
     }
 
