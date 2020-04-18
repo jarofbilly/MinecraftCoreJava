@@ -3,7 +3,7 @@ version: "1.0"
 api: ["1.0.0"]
 author: jarofbilly
 description: A basic plugin for NukkitX
-main: billyjar.MinecraftCore.main
+main: billyjar.MinecraftCore.CorePluginManager
 
 permissions:
   CoreApi.up:

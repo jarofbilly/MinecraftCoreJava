@@ -9,6 +9,8 @@ public abstract class CommandBase extends Command {
 
     public CommandBase(String name, CoreApi api) {
         super(name);
+        this.setPermission("MinecraftCore." + name);
+        this.api = api;
     }
 
     protected CoreApi getApi(){
