@@ -10,9 +10,9 @@ import cn.nukkit.level.Location;
 import cn.nukkit.level.Position;
 import cn.nukkit.math.BlockFace;
 
-public class up extends CommandBase {
-    public up (CoreApi api) {
-        super("up", api);
+public class upy extends CommandBase {
+    public upy (CoreApi api) {
+        super("upy", api);
     }
 
     public boolean execute(CommandSender sender, String s, String[] args) {

@@ -2,7 +2,7 @@
   <artifact type="jar" build-on-make="true" name="MinecraftCore">
     <output-path>$PROJECT_DIR$</output-path>
     <root id="archive" name="MinecraftCore.jar">
-      <element id="module-output" name="MC_Core" />
+      <element id="module-output" name="MinecraftCoreJava" />
     </root>
   </artifact>
 </component>
