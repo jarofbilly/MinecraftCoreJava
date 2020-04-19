@@ -21,8 +21,8 @@ public class upy extends CommandBase {
             return false;
         }
         sender.sendMessage("Whoosh, you've gone up loads");
-        Player player = sender.getServer().getPlayerExact(sender.getName());
-        Level level = (Level) sender;
+        Player player = (Player) sender;
+        Level level = player.getLevel();
         level.setBlock(player.getPosition(), Block.get(Block.GLASS));
 
         return true;
