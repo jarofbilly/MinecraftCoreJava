@@ -5,24 +5,26 @@ import billyjar.MinecraftCore.CoreApi;
 import cn.nukkit.Player; //add these in they're usefull
 import cn.nukkit.block.Block;
 import cn.nukkit.command.CommandSender;
+import cn.nukkit.item.Item;
+import cn.nukkit.level.Level;
 import cn.nukkit.level.Location;
+import cn.nukkit.level.Position;
+import cn.nukkit.math.BlockFace;
 
-public class up extends CommandBase {
-    public up (CoreApi api) {
-        super("up", api);
+public class upy extends CommandBase {
+    public upy (CoreApi api) {
+        super("upy", api);
     }
 
     public boolean execute(CommandSender sender, String s, String[] args) {
         if (!this.testPermission(sender)) {
             return false;
         }
+        sender.sendMessage("Whoosh, you've gone up loads");
         Player player = sender.getServer().getPlayerExact(sender.getName());
+        Level level = (Level) sender;
+        level.setBlock(player.getPosition(), Block.get(Block.GLASS));
+
         return true;
     }
-
-
-
-
-
-
 }
