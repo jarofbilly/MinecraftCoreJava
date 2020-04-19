@@ -3,10 +3,8 @@ package billyjar.MinecraftCore;
 import cn.nukkit.Player;
 import cn.nukkit.event.EventHandler;
 import cn.nukkit.event.Listener;
-import cn.nukkit.event.player.PlayerFormRespondedEvent;
-import cn.nukkit.event.player.PlayerItemConsumeEvent;
-import cn.nukkit.event.player.PlayerJoinEvent;
-import cn.nukkit.event.player.PlayerMoveEvent;
+import cn.nukkit.event.player.*;
+import cn.nukkit.form.window.FormWindowCustom;
 import cn.nukkit.form.window.FormWindowSimple;
 import cn.nukkit.permission.PermissionAttachment;
 import cn.nukkit.utils.TextFormat;
@@ -28,11 +26,12 @@ public class events implements Listener {
     @EventHandler
     public void onFormResponse(PlayerFormRespondedEvent e) {
         Player p = e.getPlayer();
-        if (e.getWindow() instanceof FormWindowSimple) {
-            FormWindowSimple gui = (FormWindowSimple) e.getWindow();
-            if (gui.getTitle().equals("Test")) {
-                String responseName = gui.getResponse().getClickedButton().getText();
-                p.sendMessage("You selected: "+responseName);
+        if (e.getWindow() instanceof FormWindowCustom) {
+            FormWindowCustom gui = (FormWindowCustom) e.getWindow();
+            if (gui.getTitle().equals("Speed setter")) {
+                float response = gui.getResponse().getSliderResponse(0);
+                p.setMovementSpeed(response/50);
+                p.sendMessage("Your speed is now: "+response);
             }
 
             return;
@@ -45,5 +44,10 @@ public class events implements Listener {
         perms.put(e.getPlayer().getUniqueId(), attachment);
         PermissionAttachment pperms = perms.get(e.getPlayer().getUniqueId());
         pperms.setPermission("MinecraftCore.example", true);
+    }
+
+    @EventHandler
+    public void onDrop(PlayerDropItemEvent e) {
+        e.setCancelled(true);
     }
 }
