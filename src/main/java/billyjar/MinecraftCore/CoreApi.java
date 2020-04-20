@@ -31,6 +31,7 @@ public class CoreApi {
     private static CoreApi instance = null;
     private CorePluginManager plugin;
     private Vector3 vector3 = new Vector3();
+    private List playersJoined;
     public CoreApi(CorePluginManager plugin){
         instance = this;
         this.plugin = plugin;
@@ -49,6 +50,10 @@ public class CoreApi {
             }
         }
         return null;
+    }
+
+    public void playerJoin(Player player){
+        playersJoined.add(player);
     }
 
 

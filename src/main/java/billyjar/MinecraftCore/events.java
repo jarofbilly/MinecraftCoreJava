@@ -15,6 +15,7 @@ import java.util.UUID;
 public class events implements Listener {
 
     public HashMap<UUID, PermissionAttachment> perms = new HashMap<UUID, PermissionAttachment>();
+    protected CoreApi api;
 
     @EventHandler
     public void onMove(PlayerMoveEvent event)
@@ -33,14 +34,13 @@ public class events implements Listener {
                 p.setMovementSpeed(response/50);
                 p.sendMessage("Your speed is now: "+response);
             }
-
-            return;
         }
     }
 
     @EventHandler
     public void onJoin(PlayerJoinEvent e) {
         PermissionAttachment attachment = e.getPlayer().addAttachment(CorePluginManager.plugin);
+        api.playerJoin(e.getPlayer());
         perms.put(e.getPlayer().getUniqueId(), attachment);
         PermissionAttachment pperms = perms.get(e.getPlayer().getUniqueId());
         pperms.setPermission("MinecraftCore.example", true);
